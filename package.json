@@ -3,15 +3,19 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon src/index.ts"
+    "dev": "nodemon src/index.ts",
+    "build": "bunx esbuild --platform=node --bundle src/index.ts --outdir=dist --minify",
+    "postinstall": "npx prisma generate"
   },
   "dependencies": {
     "@fastify/cors": "^9.0.1",
     "@prisma/client": "5.12.1",
+    "dotenv": "^16.4.5",
     "fastify": "4.26.2"
   },
   "devDependencies": {
     "@types/node": "20.12.5",
+    "esbuild": "^0.20.1",
     "nodemon": "^3.1.0",
     "prisma": "5.12.1",
     "ts-node": "10.9.2",
