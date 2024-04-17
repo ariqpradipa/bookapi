@@ -1,10 +1,10 @@
 {
-  "name": "rest-express",
+  "name": "bookapi-rest",
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "dev": "nodemon src/index.ts",
-    "build": "bunx esbuild --platform=node --bundle src/index.ts --outdir=dist --minify",
+    "build": "npx esbuild --platform=node --bundle src/index.ts --outdir=dist --minify",
     "postinstall": "npx prisma generate"
   },
   "dependencies": {
