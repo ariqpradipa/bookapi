@@ -99,4 +99,10 @@ export default async function routes(fastify: any) {
         })
         return reply.send({ data: author })
     });
+
+
+    // health check
+    fastify.get('/healthcheck', async () => {
+        return { status: "ok", message: 'Application is healthy' }
+    })
 }
